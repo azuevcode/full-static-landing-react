@@ -1,0 +1,390 @@
+.content {
+    background-color: #fff;
+
+    .content__block {
+        max-width: 1520px;
+        margin: 0 auto;
+    }
+
+    .title {
+        &__item {
+            font-size: 60px;
+
+            &_light {
+                font-family: "Brandon-Light";
+            }
+    
+            &_bold {
+                font-family: "Brandon-Bold";
+            }
+        }
+
+        &__subtitle {
+            font: 22px "Brandon-Regular";
+            margin-top: -10px;
+
+            &_gray {
+                color: #777;
+            }
+
+            &_white {
+                color: #fff;
+            }
+        }
+
+        &__services {
+            margin-bottom: 35px;
+            color: #000;
+
+            &-list {
+                color: #000;
+                margin-bottom: 10px;
+                font: 22px "Brandon-Medium";
+            }
+        }
+
+        &__clients {
+            text-align: center;
+            margin-bottom: 47px;
+            color: #000;
+        }
+
+        &__team {
+            color: #fff;
+            text-align: center;
+            margin-bottom: 47px;
+        }
+
+        &__contact {
+            color: #fff;
+            margin-bottom: 50px;
+            padding-right: 80px;
+
+            .title__subtitle {
+                margin-top: 15px;  
+                font-size: 18px;
+            }
+        }
+    }
+
+    .services {
+        &-item {
+            padding: 100px 280px;
+        }
+
+        &__development,
+        &__branding {
+            display: flex;
+            align-items: center;
+        }
+
+        &__development {
+            &-icon {
+                margin-left: 55px;
+            }
+        }
+
+        &__branding {
+            flex-direction: row-reverse;
+            background: $creamy;
+            
+            &-icon {
+                margin-right: 55px;
+            }
+        }
+
+        &__description {
+            font: 18px "Brandon-Regular";
+            color: #777;
+
+            &_small {
+                width: 84%;
+            }
+
+            &-item:not(:last-of-type) {
+                margin-bottom: 35px;
+            }
+        }
+
+        &__list {
+            display: flex;
+
+            &-icon {
+                width: 72px;
+                min-width: 72px;
+                height: 72px;
+                background: url(../images/sprites/services-items.png) no-repeat;
+                margin-right: 20px;
+
+                &_branding-indentity{
+                    background-position-y: 0%;
+                }
+
+                &_mobile-app-develop{
+                    background-position-y: 20%;
+                }
+
+                &_ui-ux{
+                    background-position-y: 40%;
+                }
+
+                &_web-graphic-design{
+                    background-position-y: 60%;
+                }
+
+                &_animations{
+                    background-position-y: 80%;
+                }
+
+                &_photography{
+                    background-position-y: 100%;
+                }
+            }
+
+            &-item {
+                display: flex;
+
+                &:not(:last-of-type) {
+                    margin-bottom: 50px;
+                }
+            }   
+        }
+
+        &__side {
+            &:first-of-type {
+                margin-right: 110px;
+            }
+        }
+    }
+    
+    .clients {
+        background-color: #fafafa;
+        padding: 100px 230px;
+
+        &__item {
+            display: flex;
+            align-items: center;
+
+            &:nth-of-type(odd) {
+                flex-direction: row-reverse;
+            }
+            
+            &:not(:last-of-type) {
+                margin-bottom: 40px;
+            }
+        }
+
+        &__photo {
+            background: #000;
+            width: 235px;
+            min-width: 235px;
+            height: 235px;
+            border-radius: 50%;
+        }
+
+        &__review {
+            background-color: #fff;
+            border: 1px solid #e8e8e8;
+            height: 100%;
+            padding: 43px 74px;
+            position: relative;
+
+            &_odd {
+                margin-left: 47px;
+
+                @include arrow(right);
+            }
+
+            &_even { 
+                margin-right: 47px;
+
+                @include arrow(left);
+            }
+        }
+
+        &__quote {
+            font: 26px "Brandon-Regular";
+            color: #777;
+            margin-bottom: 14px;
+        }
+
+        &__author {
+            font: 20px "Brandon-Regular";   
+            color: #7690c5;
+        }
+    }
+
+    .companies {
+        text-align: center;
+        background: #fff;
+        padding: 60px 0;
+
+        &__logo {
+            vertical-align: middle;
+            
+            &:not(:last-of-type) {
+                margin-right: 60px;
+            }
+        }
+    }
+
+    .team {
+        background-color: #111;
+        padding: 100px 280px;
+        color: #fff;
+
+        &__participants {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-bottom: 50px;
+        }
+
+        .participant {
+            &__photo {
+                width: 235px;
+                height: 235px;
+                margin: 0 30px 26px;
+                border: 7px solid #fff;
+                border-radius: 50%;
+            }
+
+            &__person {
+                text-align: center;
+                margin-bottom: 11px;
+            }
+
+            &__name {
+                font: 18px "Brandon-Bold";
+            }
+
+            &__position {
+                font: 16px "Brandon-Regular";
+            }
+
+            &__media {
+                display: flex;
+                justify-content: center;
+            }
+
+            &__social {
+                width: 41px;
+                height: 41px;
+                border: 3px solid #fff;
+                border-radius: 50%;
+
+                &:not(:last-of-type) {
+                    margin-right: 10px;
+                }
+
+                &_twitter {
+                    background: url(../images/media/twitter.png) no-repeat 50% 50%;
+                }
+
+                &_fb {
+                    background: url(../images/media/facebook.png) no-repeat 50% 50%; 
+                }
+
+                &_gplus {
+                    background: url(../images/media/gplus.png) no-repeat 50% 50%;
+                }
+
+                &_pinterest {   
+                    background: url(../images/media/pinterest.png) no-repeat 50% 50%;
+                }
+            }
+        }
+
+        &__description {
+            text-align: center;
+            font: 20px "Brandon-Regular";
+        }
+    } 
+
+    .contact {
+        background-color: #7690c5;
+        padding: 100px 240px;
+        display: flex;
+        flex-wrap: wrap;
+
+        &__contacts {
+            width: 51%;
+        }
+
+        &__list {
+            display: flex;
+        }
+
+        &__side {
+            width: 230px;
+        }
+
+        &__item {
+            font: 18px "Brandon-Regular";
+            background: url(../images/sprites/contacts-items.png) no-repeat;
+            min-height: 40px;
+
+            a {
+                padding-left: 40px;
+                line-height: 42px;
+            }
+
+            &_mobile {
+                background-position-y: 0%;
+            }
+
+            &_twitter {
+                background-position-y: 20%;
+            }
+
+            &_gplus {
+                background-position-y: 40%;
+            }
+
+            &_email {
+                background-position-y: 60%;
+            }
+
+            &_facebook {
+                background-position-y: 80%;
+            }
+
+            &_pinterest {
+                background-position-y: 100%;
+            }
+        }
+
+        &__feedback {
+            width: 47%;
+            max-width: 470px;
+
+            &-item {
+                display: block;
+                resize: none;
+                width: 100%;
+                border: 1px solid #ccc;
+                border-radius: 3px; 
+                padding: 16px 20px 20px;
+                font: 18px "Brandon-Medium";
+                color: #bbb;
+                
+                &:not(:last-child) {
+                    margin-bottom: 20px;
+                }
+
+                @include placeholder {
+                    color: #bbb;
+                }
+
+                &_submit {
+                    border: 1px solid #ccc;
+                    background: #fff;
+                    padding: 15px 30px;
+                    border-radius: 3px;
+                    color: #bbb;
+                }
+            }
+        }
+        
+    }
+}

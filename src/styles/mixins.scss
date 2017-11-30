@@ -1,0 +1,45 @@
+@mixin fontFace($family, $src) {
+	@font-face {
+        font-family: $family;
+        src: url('#{$src}.ttf') format('truetype');
+        font-weight: normal;
+        font-style: normal; 
+    }
+}
+
+@mixin backgroundImageFullSize($url, $pos-y: 100%) {
+    background: url($url) no-repeat 100% #{$pos-y}/100%;
+}
+
+@mixin arrow($direction) {
+    margin-#{$direction}: 50px;
+    
+    &:before,
+    &:after {
+        content: '';
+        position: absolute;
+        #{$direction}: 100%;
+        top: 50%;
+    }
+
+    &:before {
+        margin-top: -12px;
+        border-top: 12px solid transparent;
+        border-#{$direction}: 20px solid #e8e8e8;
+        border-bottom: 12px solid transparent;
+    }
+
+    &:after {
+        margin-top: -11px;
+        border-top: 11px solid transparent;
+        border-#{$direction}: 19px solid #fff;
+        border-bottom: 11px solid transparent;
+    }
+}
+
+@mixin placeholder {
+    &::-webkit-input-placeholder {@content}
+    &:-moz-placeholder           {@content}
+    &::-moz-placeholder          {@content}
+    &:-ms-input-placeholder      {@content}  
+  }
